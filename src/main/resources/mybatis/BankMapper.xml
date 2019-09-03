@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.geodesy.dao.BankMapper">
+
+    <resultMap id="BaseResultMap" type="com.springboot.geodesy.entity.Bank">
+        <result column="org_name" jdbcType="VARCHAR" property="orgName" />
+        <result column="bran_lati" jdbcType="VARCHAR" property="branLati" />
+        <result column="bran_long" jdbcType="VARCHAR" property="branLong" />
+    </resultMap>
+
+    <select id="getBankList" resultMap="BaseResultMap">
+        select * from acrm_f_ci_org_info
+    </select>
+
+</mapper>
