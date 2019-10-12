@@ -93,8 +93,8 @@ public class CaculateDistance implements CommandLineRunner, Ordered {
 
     public double getDis(String  comLa,String comLong,String branLa , String branLong){
             double meter = 0;
-            GlobalCoordinates source = new GlobalCoordinates(Double.valueOf(comLa), Double.valueOf(comLong));
-            GlobalCoordinates target = new GlobalCoordinates(Double.valueOf(branLa), Double.valueOf(branLong));
+            GlobalCoordinates source = new GlobalCoordinates(Double.parseDouble(comLa.trim()), Double.parseDouble(comLong.trim()));
+            GlobalCoordinates target = new GlobalCoordinates(Double.parseDouble(branLa.trim()), Double.parseDouble(branLong.trim()));
             meter = getDistanceMeter(source, target, Ellipsoid.WGS84);
         return meter;
     }

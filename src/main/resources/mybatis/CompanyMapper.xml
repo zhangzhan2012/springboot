@@ -10,6 +10,6 @@
 </resultMap>
 
     <select id="getCompanyList" resultMap="BaseResultMap">
-        select * from acrm_f_ci_comp_info
+        select company_name, comp_lati,comp_long,comp_addr from acrm_f_ci_comp_info
     </select>
 </mapper>
